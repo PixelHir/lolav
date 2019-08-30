@@ -15,9 +15,8 @@ namespace LolAV
 {
     class League
     {
-        static readonly HttpClient client = new HttpClient();
-        static string authRegexPattern = @"""--remoting-auth-token=(?'token'.*?)"" | ""--app-port=(?'port'|.*?)""";
-        static RegexOptions authRegexOptions = RegexOptions.Multiline;
+        static readonly string authRegexPattern = @"""--remoting-auth-token=(?'token'.*?)"" | ""--app-port=(?'port'|.*?)""";
+        static readonly RegexOptions authRegexOptions = RegexOptions.Multiline;
 
         public static void SetIcon(string id, IconPick v)
         {
@@ -82,8 +81,10 @@ namespace LolAV
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback +=
                 (sender, cert, chain, sslPolicyErrors) => { return true; };
-            var client = new RestClient("https://127.0.0.1:" + port);
-            client.Authenticator = new HttpBasicAuthenticator("riot", token);
+            RestClient client = new RestClient("https://127.0.0.1:" + port)
+            {
+                Authenticator = new HttpBasicAuthenticator("riot", token)
+            };
             var req = new RestRequest("/lol-summoner/v1/current-summoner/icon", Method.PUT);
             req.AddJsonBody(new { profileIconId = id});
             var res = client.Execute(req);

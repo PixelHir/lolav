@@ -531,7 +531,7 @@ namespace LolAV
             // 
             // titlebar
             // 
-            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
+            this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(33)))), ((int)(((byte)(55)))));
             this.titlebar.Controls.Add(this.titletext);
             this.titlebar.Controls.Add(this.pictureBox1);
             this.titlebar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -591,6 +591,7 @@ namespace LolAV
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IconPick";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LolAV";
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icon_29)).EndInit();

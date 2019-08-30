@@ -23,7 +23,7 @@ namespace LolAV
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        Assembly assembly = Assembly.GetExecutingAssembly();
+        readonly Assembly assembly = Assembly.GetExecutingAssembly();
         public IconPick()
         {
             InitializeComponent();
