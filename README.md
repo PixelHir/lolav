@@ -1,5 +1,5 @@
 # [**Download Latest Build**](https://github.com/PixelHir/LolAV/releases/latest)
-
+Requires [.NET 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 
 # Screenshot
 ![](https://raw.githubusercontent.com/PixelHir/lolav/assets/ss1.png)
