@@ -6,6 +6,7 @@ using System.Linq;
 using System.Management;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -20,28 +21,16 @@ namespace LolAV
 
         public static void SetIcon(string id, IconPick v)
         {
-            v.statusMessage.Invoke((MethodInvoker)delegate
-            {
-                v.statusMessage.Text = "Connecting to League Client...";
-            });
+            UpdateStatus("Connecting to League Client...", v);
             try
             {
                 var auth = League.GetAuth();
-                v.statusMessage.Invoke((MethodInvoker)delegate
-                {
-                    v.statusMessage.Text = "Sending request...";
-                });
+                UpdateStatus("Sending Icon Change Request...", v);
                 League.SendRequest(auth.Item1, auth.Item2, id);
-                v.statusMessage.Invoke((MethodInvoker)delegate
-                {
-                    v.statusMessage.Text = "Icon was set successfully.";
-                });
+                UpdateStatus("Icon was set successfully.", v);
             } catch (Exception)
             {
-                v.statusMessage.Invoke((MethodInvoker)delegate
-                {
-                    v.statusMessage.Text = "Can't connect to League Client. Is it on?";
-                });
+                UpdateStatus("Can't connect to League Client. Is it on?", v);
             }
         }
         private static (String, String) GetAuth()
@@ -88,6 +77,13 @@ namespace LolAV
             var req = new RestRequest("/lol-summoner/v1/current-summoner/icon", Method.PUT);
             req.AddJsonBody(new { profileIconId = id});
             var res = client.Execute(req);
+        }
+        private static void UpdateStatus(string text, IconPick v)
+        {
+            v.statusMessage.Invoke((MethodInvoker)delegate
+            {
+                v.statusMessage.Text = text;
+            });
         }
     }
 }

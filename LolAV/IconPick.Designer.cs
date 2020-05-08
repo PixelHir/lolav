@@ -549,7 +549,7 @@ namespace LolAV
             this.titletext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.titletext.Location = new System.Drawing.Point(0, 0);
             this.titletext.Name = "titletext";
-            this.titletext.Size = new System.Drawing.Size(61, 25);
+            this.titletext.Size = new System.Drawing.Size(60, 25);
             this.titletext.TabIndex = 2;
             this.titletext.Text = "LolAV";
             this.titletext.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_MouseDown);
