@@ -1,6 +1,7 @@
 ![](https://img.shields.io/github/downloads/PixelHir/lolav/total)
-# [**Download Latest Build**](https://github.com/PixelHir/LolAV/releases/latest)
-Requires [.NET 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+# [![Download LolAV](https://github.com/PixelHir/lolav/raw/assets/download.png)](https://github.com/PixelHir/LolAV/releases/latest)
+Press the button above to download LolAV.
+Requires [.NET 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472). Make sure you have it installed before reporting any issues.
 
 
 # Screenshot
