@@ -9,8 +9,11 @@ Requires [.NET 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net
 
 
 # FAQ
-### Is it safe? Can i be banned for this?
-Riot has been informed about this program and it is compliant with [League Client API Policies](https://developer.riotgames.com/league-client-apis.html). It provides no gameplay advantage.
+### Is it safe? Can I be banned for this?
+Riot has been informed and is aware about this program as it is compliant with [League Client API Policies](https://developer.riotgames.com/league-client-apis.html). It provides no gameplay advantage.
+
+### Program says that it cannot find League Client.
+Are you running League as Administrator? Try running the LolAV as admin as well, otherwise fill an issue.
 
 
 
