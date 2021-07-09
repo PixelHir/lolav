@@ -1,3 +1,9 @@
+# **Update**
+**Riot has patched most of the icons, you can still use the first one (the placeholder champion icon)**
+
+There will be no future updates to the app.
+
+
 ![](https://img.shields.io/github/downloads/PixelHir/lolav/total)
 # [![Download LolAV](https://github.com/PixelHir/lolav/raw/assets/download.png)](https://github.com/PixelHir/lolav/releases/latest/download/LolAV-setup.exe)
 Press the button above to download LolAV.
